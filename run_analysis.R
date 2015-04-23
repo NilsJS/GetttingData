@@ -15,18 +15,18 @@
 library(dplyr)
 
 # Features: list of all features
-features <- read.table("data/CourseProject/UCI HAR Dataset/features.txt")
+features <- read.table("./features.txt")
 
 # Activity labels: links the class lables with their activity name
-activity_labels <- read.table("data/CourseProject/UCI HAR Dataset/activity_labels.txt")
+activity_labels <- read.table("./activity_labels.txt")
 
 # Training set
-train <- read.table("data/CourseProject/UCI HAR Dataset/train/X_train.txt")
-train_labels <- read.table("data/CourseProject/UCI HAR Dataset/train/y_train.txt")
+train <- read.table("./train/X_train.txt")
+train_labels <- read.table("./train/y_train.txt")
 
 # Test set 
-test <- read.table("data/CourseProject/UCI HAR Dataset/test/X_test.txt")
-test_labels <- read.table("data/CourseProject/UCI HAR Dataset/test/y_test.txt")
+test <- read.table("./test/X_test.txt")
+test_labels <- read.table("./test/y_test.txt")
 
 # Use the features as names for the columns
 colnames(train) <- features[,2]
@@ -51,4 +51,4 @@ combo.subset <- combo[cols]
 activity_summary <- summarise_each(group_by(combo.subset, activity), funs(mean))
 
 # Store the tity file
-write.table(activity_summary, file = "data/CourseProject/tidy_set.txt", row.name = FALSE)
+write.table(activity_summary, file = "./tidy_set.txt", row.name = FALSE)
