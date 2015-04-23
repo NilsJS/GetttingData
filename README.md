@@ -1,7 +1,7 @@
 #Getting and Cleaning Data - Course Project 
 
 The data can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-The data must be stored locally.  Extract the content of the subdirectory UCI HAR Dataset/, into the same directory in which run_analysis.R resides.  The data will ahve two subdirectories, test and train.
+The data must be stored locally.  Extract the content of the subdirectory UCI HAR Dataset/, into the same directory in which run_analysis.R resides.  The data will have two subdirectories, test and train.
 
 #The goal of this script:
 1. Merge the training and test sets to create one data set
@@ -19,6 +19,7 @@ this will generate a tidy summary file, "tidy_set.txt" that has the average of m
 
 #Code Book
 Variables found in the output file, tidy_set.txt
+Original description of the input data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ##activity
 Based on activity_labels in the input data set.
@@ -86,4 +87,10 @@ Average grouped by activity
 Average grouped by activity
 
 
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+- The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
+- The gyroscope units are rad/seg.
 
