@@ -18,7 +18,8 @@ this will generate a tidy summary file, "tidy_set.txt" that has the average of m
 
 
 #Code Book
-Variables found in the output file, tidy_set.txt
+Variables found in the output file, tidy_set.txt.
+
 Original description of the input data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ##activity
